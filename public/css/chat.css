@@ -1,0 +1,123 @@
+.container,
+.user {
+    border: 2px solid #6f0a66;
+    background-color: #8b4f79;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.container.darker,
+.user.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.container::after,
+.user::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container img,
+.user img {
+    float: left;
+    max-width: 40px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.container img.right,
+.user img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.time {
+    color: rgb(242, 173, 230);
+}
+
+.message-column {
+    float: left;
+    padding: 10px;
+    width: 25%;
+    height: 100%;
+    /* Should be removed. Only for demonstration */
+}
+
+.rooms-column {
+    float: right;
+    padding: 10px;
+    width: 20%;
+    height: 100%;
+    /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+emoji-picker {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 8%;
+}
+
+input[type=text] {
+    width: 80%;
+    padding: 12px 40px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    width: 80px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #a72458;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#app {
+    color: white;
+    width: 90%;
+    height: 50%;
+    margin: auto;
+}
+
+.title{
+    color: rgb(111, 67, 99);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.username {
+    margin-top: 5px;
+}
+
+#myFile {
+    display: none;
+}
