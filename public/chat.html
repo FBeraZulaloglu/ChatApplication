@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="css/chat.css" />
+</head>
+
+<body style="background-color:rgb(198, 161, 179);">
+    <div id="app">
+        <div class="row">
+            <div class="message-column" ">
+
+                <button id="btn-leave">Exit</button>
+                <div class="container">
+                    <img src="img/defaultAvatar.png" alt="Avatar">
+                    <p id="current-username" class="username"><b>Current User</b></p>
+                </div>
+                <div style="background-color:rgb(44, 44, 44); height:600px;overflow-y: scroll; overflow: hidden; ">
+                    <h2 class="title">Chat Friends</h2>
+                    <div id="users" style=" height:100%; overflow-y: scroll; overflow: hidden; ">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="message-column" style="width:50%; height:580px">
+                <h2 id="chat-source" class="title">Chats</h2>
+                <div style="height:100%">
+                    <emoji-picker hidden>id="emoji-table"></emoji-picker>
+                    <div id="chats" style=" height: 100%; overflow-y: scroll; overflow: hidden;">
+                    </div>
+
+                </div>
+
+                <div class="send-message-container">
+                    <button id="btn-emoji">Emoji</button>
+                    <input type="file" id="myFile" size="50">
+                    <button id="btn-file">File</button>
+                    <form id="chat-form">
+                        <input id="msg" type="text" placeholder="Write something..." required autocomplete="off">
+                        <button>Send</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="rooms-column">
+                <h2 class="title">Rooms</h2>
+                <div id="chat-rooms">
+
+                </div>
+                <div>
+                    <form id="room-form">
+                        <input id="msg_new_room" type="text" placeholder="Create Chat Room" required autocomplete="off">
+                        <button>Create</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+<script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+    integrity="sha512-f0AM6x08kthGzMyDHZjBgjBCPp8V8ovlHYCI1jMkhViTeX3MykGCf/DnN1khWss/6d1105eAG4TniSKy6UhZrw=="
+    crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/client.js"></script>
+<script src="js/moment.js"></script>
+
+</html>
